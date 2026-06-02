@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Orientação Digital</title>
+    <!-- Vinculando o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Menu Superior de Acessibilidade -->
+    <div class="accessibility-bar" role="toolbar" aria-label="Ferramentas de acessibilidade">
+        <button onclick="alterarFonte(1)" aria-label="Aumentar tamanho do texto">A+</button>
+        <button onclick="alterarFonte(-1)" aria-label="Diminuir tamanho do texto">A-</button>
+        <button class="btn-audio" id="btn-audio" onclick="lerPagina()" aria-label="Ouvir texto da página">🔊 Ler Página</button>
+    </div>
+
+    <!-- Container Principal do Conteúdo -->
+    <div class="container" id="conteudo-principal">
+        <header class="main-header">
+            <h1>Portal de Orientação Digital</h1>
+            <p>Seus direitos e orientações rápidas sobre segurança na internet.</p>
+        </header>
+
+        <main>
+            <!-- Zona de Botões de Destaque / Ajuda Rápida Ativa -->
+            <div class="emergency-zone">
+                <button class="btn-emergency btn-leak" onclick="executarAcaoEmergencia('vazamento')">⚠️ MEUS DADOS VAZARAM</button>
+                <button class="btn-emergency btn-abuse" onclick="executarAcaoEmergencia('ofensa')">❌ ESTOU SOFRENDO OFENSAS</button>
+            </div>
+
+            <!-- Seções Informativas Fundamentadas nas Leis -->
+            <section class="info-card">
+                <h2>Seus Direitos na Internet</h2>
+                <p>A internet não é uma terra sem leis. No Brasil, temos ferramentas jurídicas poderosas para proteger você contra abusos, golpes e vazamentos.</p>
+            </section>
+
+            <section class="info-card">
+                <h2>Proteção de Dados <span class="law-badge">LGPD</span></h2>
+                <p>Segundo a Lei Geral de Proteção de Dados, você tem o direito de saber exatamente como as empresas usam suas informações. Você pode exigir o acesso, a correção ou a exclusão definitiva dos seus dados de qualquer plataforma a qualquer momento.</p>
+            </section>
+
+            <section class="info-card">
+                <h2>Privacidade e Conteúdo <span class="law-badge">Marco Civil</span></h2>
+                <p>O Marco Civil da Internet garante o sigilo das suas comunicações privadas. Além disso, se alguém publicar fotos ou vídeos íntimos seus sem autorização, as plataformas são obrigadas a remover o conteúdo rapidamente após a sua notificação.</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Vinculando a lógica em JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
